@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-const cardInfo = [
+function Discover() {
+  const cardInfo = [
     {
       img: "/image 10.svg",
       title: "AI-Powered Content Generation",
@@ -9,7 +10,7 @@ const cardInfo = [
       imgOnBottom: false,
     },
     {
-      img: "/image 10.svg",
+      img: "/image 11.svg",
       title: "Automated Publishing",
       desc: "Publish across multiple platforms with one click, saving time and ensuring consistency across your channels.",
       imgOnBottom: true,
@@ -21,7 +22,7 @@ const cardInfo = [
       imgOnBottom: false,
     },
     {
-      img: "/image 10.svg",
+      img: "/image 15.svg",
       title: "Performance Analytics",
       desc: "Track content performance with real-time insights, helping you optimize your strategy and improve engagement.",
       imgOnBottom: false,
@@ -38,10 +39,7 @@ const cardInfo = [
       desc: "Boost your content's reach with built-in SEO tools that ensure your content is optimized for search engines.",
       imgOnBottom: false,
     },
-  ]
-
-function Discover() {
-
+  ];
 
   return (
     <div
@@ -61,37 +59,41 @@ function Discover() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-[42px]">
-         { cardInfo.map((card, idx) => (
-    <div
-      key={idx}
-      className="bg-white rounded-[12px] p-6 shadow-sm flex flex-col justify-between max-w-[417px] max-h-[307px] h-[307px]"
-    >
-      <div className={`flex flex-col ${card.imgOnBottom ? 'order-2' : 'order-1'} gap-[34px]`}>
-        {!card.imgOnBottom && (
-          <Image
-            src={card.img}
-            alt={`Card ${idx + 1}`}
-            className="w-full rounded-md"
-            width={260}
-            height={123}
-          />
-        )}
-        <div>
-          <h3 className="font-semibold text-gray-900">{card.title}</h3>
-          <p className="text-gray-600 text-sm">{card.desc}</p>
-        </div>
-        {card.imgOnBottom && (
-          <Image
-            src={card.img}
-            alt={`Card ${idx + 1}`}
-            className="w-full rounded-md"
-            width={260}
-            height={123}
-          />
-        )}
-      </div>
-    </div>
-  ))}
+          {cardInfo.map((card, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-[12px] p-6 shadow-sm flex flex-col justify-between max-w-[417px] max-h-[307px] h-[307px]"
+            >
+              <div
+                className={`flex flex-col ${
+                  card.imgOnBottom ? "order-2" : "order-1"
+                } gap-[34px]`}
+              >
+                {!card.imgOnBottom && (
+                  <Image
+                    src={card.img}
+                    alt={`Card ${idx + 1}`}
+                    className="w-full rounded-md"
+                    width={260}
+                    height={123}
+                  />
+                )}
+                <div>
+                  <h3 className="font-semibold text-gray-900">{card.title}</h3>
+                  <p className="text-gray-600 text-sm">{card.desc}</p>
+                </div>
+                {card.imgOnBottom && (
+                  <Image
+                    src={card.img}
+                    alt={`Card ${idx + 1}`}
+                    className="w-full rounded-md"
+                    width={260}
+                    height={123}
+                  />
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

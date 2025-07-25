@@ -74,19 +74,34 @@ function Header() {
       {isMenuOpen && (
         <nav className="md:hidden mt-6 mb-5 font-medium text-base">
           <ul className="space-y-4 flex flex-col justify-center items-center">
-            <li className="hover:text-[#E5E7EB]" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="hover:text-[#E5E7EB]"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <a href="#">Home</a>
             </li>
-            <li className="hover:text-[#E5E7EB]" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="hover:text-[#E5E7EB]"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <a href="#">Feature</a>
             </li>
-            <li className="hover:text-[#E5E7EB]" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="hover:text-[#E5E7EB]"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <a href="#">Pricing</a>
             </li>
-            <li className="hover:text-[#E5E7EB]" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="hover:text-[#E5E7EB]"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <a href="#">Blog</a>
             </li>
-            <li className="hover:text-[#E5E7EB]" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="hover:text-[#E5E7EB]"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <a href="#">Support</a>
             </li>
           </ul>
