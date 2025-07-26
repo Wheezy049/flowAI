@@ -7,6 +7,8 @@ import Direction from "./Direction";
 import StartTrial from "./StartTrial";
 import Testimonial from "./Testimonial";
 import Feature from "./Feature";
+import GetStarted from "./GetStarted";
+import Footer from "./Footer";
 
 function HomeLayout() {
   return (
@@ -20,6 +22,8 @@ function HomeLayout() {
         <StartTrial />
         <Testimonial />
         <Feature />
+        <GetStarted />
+        <Footer />
       </div>
     </div>
   );
